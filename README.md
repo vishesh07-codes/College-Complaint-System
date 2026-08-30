@@ -38,7 +38,7 @@ College-Complaint-System/
 
 1. Clone or download this repository.
    ```bash
-   git clone <repository-url>
+   git clone  https://github.com/vishesh07-codes/College-Complaint-System.git
    ```
 2. Open the project folder.
 3. Open `index.html` directly in your browser to view the site.
