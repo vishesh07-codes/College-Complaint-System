@@ -1,182 +1,436 @@
-*{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+/* =====================================================
+   COLLEGE COMPLAINT SYSTEM
+   INDEX PAGE - COMMON THEME
+   ===================================================== */
+
+
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: Arial,sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f7fb;
-    color : #222;;
+    color: #222;
 }
 
-.navbar{
-    background-color:#123b6d ;
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    background-color: #123b6d;
     color: white;
+
     padding: 18px 60px;
+
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 
-.logo{
+
+/* Logo + Website Name */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     font-size: 22px;
     font-weight: bold;
 }
 
-.navbar nav a{
-    color:white;
-    text-decoration: none;
-    font-size: 16px;
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-.navbar nav a:hover{
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
     text-decoration: underline;
 }
 
-.navbar nav{
-    display: flex;
-    gap: 25px;
+
+/* Active Home */
+
+.nav-links .active {
+    border-bottom: 2px solid white;
+
+    padding-bottom: 4px;
 }
 
-.hero{
+
+/* Login */
+
+.login-btn {
+    border: 1px solid white;
+
+    padding: 8px 18px;
+
+    border-radius: 6px;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #123b6d;
+}
+
+
+/* Register */
+
+.register-btn {
+    background-color: white;
+
+    color: #123b6d !important;
+
+    padding: 8px 18px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.register-btn:hover {
+    background-color: #2563eb;
+    color: white !important;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
     min-height: 450px;
+
+    background-color: #eaf3ff;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     text-align: center;
-    background-color: #eaf3ff;
+
+    padding: 40px 8%;
 }
 
-.hero-content{
+
+.hero-content {
     max-width: 750px;
-    padding: 40px;
 }
 
-.hero-content h1{
-    font-size: 42px;   
-    color:#123b6d; 
+.hero-content h1 {
+    color: #123b6d;
+
+    font-size: 42px;
+
     margin-bottom: 20px;
 }
 
-.hero-content p{
+.hero-content p {
+    color: #333;
+
     font-size: 18px;
+
     line-height: 1.6;
+
     margin-bottom: 30px;
 }
 
-.btn{
-    background-color: #2563eb;
-    color:white;
-    padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin: 5px;
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-buttons a {
     display: inline-block;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
 }
 
-.btn:hover{
-    background-color: #1d4ed8;
-}
 
-.btn-outline{
-    background-color: transparent;
-    color:#2563eb;
+/* Submit (Login) */
+
+.submit-btn {
+    background-color: #2563eb;
+
+    color: white;
+
     border: 1px solid #2563eb;
 }
 
-.btn-outline:hover{
-    background-color: #2563eb;
-    color:white;
+.submit-btn:hover {
+    background-color: #1d4ed8;
 }
 
-.features{
+
+/* Track (Register) */
+
+.track-btn {
+    background-color: transparent;
+
+    color: #2563eb;
+
+    border: 1px solid #2563eb;
+}
+
+.track-btn:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* ================= FEATURES SECTION ================= */
+
+.features-section {
+    background-color: #f5f7fb;
+
     padding: 60px 8%;
+
     text-align: center;
 }
 
-.features h2{
-    color:#123b6d;
-    margin-bottom: 35px;
+.features-section h2 {
+    color: #123b6d;
+
+    font-size: 26px;
+
+    margin-bottom: 6px;
 }
 
-.feature-container{
+
+/* Blue line */
+
+.title-line {
+    width: 40px;
+    height: 3px;
+
+    background-color: #2563eb;
+
+    margin: 0 auto 35px;
+
+    border-radius: 2px;
+}
+
+
+/* Cards container */
+
+.features-container {
     display: flex;
+
     justify-content: center;
-    gap: 25px;
+
     flex-wrap: wrap;
+
+    gap: 25px;
 }
 
-.feature-card{
+
+/* Individual card */
+
+.feature-card {
     background-color: white;
+
     width: 280px;
-    padding: 30px;
+
+    min-height: 130px;
+
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    transition: 0.3s;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+
+    padding: 25px;
+
+    gap: 15px;
+
+    transition: 0.2s;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.feature-card h3{
-    color: #123b6d;
-    margin-bottom: 15px;
-}
 
-.feature-card p{
-    line-height: 1.6;
-}
+/* ================= FEATURE ICONS ================= */
 
-.how-it-works{
-    padding: 60px 8%;
-    text-align: center;
-}
+.feature-icon {
+    width: 45px;
+    height: 45px;
 
-.how-it-works h2{
-     margin-bottom: 35px;
-}
+    min-width: 45px;
 
-.steps{
+    border-radius: 50%;
+
     display: flex;
     justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
+    align-items: center;
 
-.step{
-    width: 280px;
-    padding: 25px;
-    
-}
-
-.step h3{
-    color: #2563eb;
-    margin-bottom: 12px;
-}
-
-.footer{
-    background-color:#123b6d;
     color: white;
-    text-align: center;
-    padding: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
 }
+
+.feature-icon.blue {
+    background-color: #2563eb;
+}
+
+.feature-icon.green {
+    background-color: #21a44b;
+}
+
+.feature-icon.purple {
+    background-color: #8145d5;
+}
+
+.feature-icon.orange {
+    background-color: #f0a000;
+}
+
+
+/* ================= FEATURE TEXT ================= */
+
+.feature-text h3 {
+    color: #123b6d;
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.feature-text p {
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.how-it-works {
+    background-color: white;
+}
+
+.how-it-works .feature-card {
+    text-align: center;
+
+    flex-direction: column;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #123b6d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* Mobile */
 
 @media (max-width: 768px) {
 
     .navbar {
         padding: 15px 20px;
+
         flex-direction: column;
+
         gap: 15px;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    .nav-links {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
-    .hero p {
-        font-size: 16px;
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .features-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 100%;
+
+        max-width: 320px;
     }
 
 }

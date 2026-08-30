@@ -1,92 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Complaint System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <!-- Navbar -->
+    <!-- ================= NAVBAR ================= -->
     <header class="navbar">
-      <div class="logo">College Complaint System</div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-      </nav>
+        <div class="brand">
+            <span>College Complaint System</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </nav>
+
     </header>
 
-    <!-- Hero Section -->
 
-    <main>
-      <section class="hero">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+
         <div class="hero-content">
-          <h1>College Complaint Management System</h1>
 
-          <p>
-            Submit your college complaints online and track their status easily.
-          </p>
+            <h1>College Complaint Management System</h1>
 
-          <div class="hero-buttons">
-            <a href="login.html" class="btn">Login</a>
-            <a href="register.html" class="btn btn-outline">Register</a>
-          </div>
+            <p>
+                Submit your college complaints online and
+                track their status easily.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="login.html" class="submit-btn">Login</a>
+                <a href="register.html" class="track-btn">Register</a>
+            </div>
+
         </div>
-      </section>
 
-      <!-- Features Section -->
-      <section class="features">
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features-section">
+
         <h2>Why Use Our System?</h2>
 
-        <div class="feature-container">
-          <div class="feature-card">
-            <h3>Easy Complaint</h3>
-            <p>Submit your complaint online in a few simple steps.</p>
-          </div>
+        <div class="title-line"></div>
 
-          <div class="feature-card">
-            <h3>Track Status</h3>
-            <p>Check the current status of your complaint easily.</p>
-          </div>
+        <div class="features-container">
 
-          <div class="feature-card">
-            <h3>Digital Records</h3>
-            <p>Complaints are stored digitally for easy management.</p>
-          </div>
+            <!-- Card 1 -->
+            <div class="feature-card">
+                <div class="feature-icon blue">➤</div>
+                <div class="feature-text">
+                    <h3>Easy Complaint</h3>
+                    <p>Submit your complaint online in a few simple steps.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card">
+                <div class="feature-icon purple">⌕</div>
+                <div class="feature-text">
+                    <h3>Track Status</h3>
+                    <p>Check the current status of your complaint easily.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card">
+                <div class="feature-icon orange">▱</div>
+                <div class="feature-text">
+                    <h3>Digital Records</h3>
+                    <p>Complaints are stored digitally for easy management.</p>
+                </div>
+            </div>
+
         </div>
-      </section>
 
-      <!-- How It Works -->
-      <section class="how-it-works">
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="features-section how-it-works">
+
         <h2>How It Works</h2>
 
-        <div class="steps">
-          <div class="step">
-            <h3>1. Submit</h3>
-            <p>Submit your complaint online.</p>
-          </div>
+        <div class="title-line"></div>
 
-          <div class="step">
-            <h3>2. Admin Checks</h3>
-            <p>Admin reviews your complaint.</p>
-          </div>
+        <div class="features-container">
 
-          <div class="step">
-            <h3>3. Status Updated</h3>
-            <p>Check the updated complaint status.</p>
-          </div>
+            <div class="feature-card">
+                <div class="feature-icon blue">1</div>
+                <div class="feature-text">
+                    <h3>Submit</h3>
+                    <p>Submit your complaint online.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon green">2</div>
+                <div class="feature-text">
+                    <h3>Admin Checks</h3>
+                    <p>Admin reviews your complaint.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon purple">3</div>
+                <div class="feature-text">
+                    <h3>Status Updated</h3>
+                    <p>Check the updated complaint status.</p>
+                </div>
+            </div>
+
         </div>
-      </section>
-    </main>
 
-    <!-- Footer -->
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
     <footer class="footer">
-      <p>© 2026 College Complaint System | Team Shadow Coder</p>
+        <p>© 2026 College Complaint System | Team Shadow Coder</p>
     </footer>
-  </body>
+
+</body>
 </html>
