@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | College Complaint System</title>
+
+    <!-- Vishesh ki SAME common CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Dashboard specific CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="brand">
+            <span>🏫</span>
+            <span>College Complaint System</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="submit-complaint.html">Submit Complaint</a>
+            <a href="my-complaints.html">My Complaints</a>
+            <a href="index.html" class="login-btn">Logout</a>
+        </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="dashboard-sidebar">
+
+            <div class="student-profile">
+                <div class="profile-icon">👤</div>
+
+                <h3>Student</h3>
+                <p>Student Account</p>
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html" class="sidebar-active">
+                    📊 Dashboard
+                </a>
+
+                <a href="submit-complaint.html">
+                    📝 Submit Complaint
+                </a>
+
+                <a href="my-complaints.html">
+                    📋 My Complaints
+                </a>
+
+                <a href="#">
+                    👤 Profile
+                </a>
+
+                <a href="#">
+                    🔐 Change Password
+                </a>
+
+                <a href="index.html">
+                    🚪 Logout
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="dashboard-main">
+
+            <!-- Welcome -->
+
+            <section class="welcome-section">
+
+                <div>
+                    <h1>Welcome, Student! 👋</h1>
+
+                    <p>
+                        Manage and track your complaints from your dashboard.
+                    </p>
+                </div>
+
+                <a href="submit-complaint.html" class="dashboard-submit-btn">
+                    + New Complaint
+                </a>
+
+            </section>
+
+
+            <!-- ================= SUMMARY CARDS ================= -->
+
+            <section class="dashboard-cards">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon blue">
+                        📋
+                    </div>
+
+                    <div>
+                        <h3>Total Complaints</h3>
+                        <p>8</p>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon orange">
+                        ⏳
+                    </div>
+
+                    <div>
+                        <h3>Pending</h3>
+                        <p>3</p>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon purple">
+                        🔄
+                    </div>
+
+                    <div>
+                        <h3>In Progress</h3>
+                        <p>2</p>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <h3>Resolved</h3>
+                        <p>3</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RECENT COMPLAINTS ================= -->
+
+            <section class="recent-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Recent Complaints</h2>
+
+                        <div class="title-line"></div>
+                    </div>
+
+                    <a href="my-complaints.html" class="view-all-btn">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Complaint ID</th>
+                                <th>Subject</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>#CMP001</td>
+
+                                <td>
+                                    Hostel Water Problem
+                                </td>
+
+                                <td>
+                                    Hostel
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    12 May 2024
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>#CMP002</td>
+
+                                <td>
+                                    Wi-Fi Not Working
+                                </td>
+
+                                <td>
+                                    IT / Computer
+                                </td>
+
+                                <td>
+                                    <span class="status progress">
+                                        In Progress
+                                    </span>
+                                </td>
+
+                                <td>
+                                    10 May 2024
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>#CMP003</td>
+
+                                <td>
+                                    Mess Food Quality
+                                </td>
+
+                                <td>
+                                    Mess
+                                </td>
+
+                                <td>
+                                    <span class="status resolved">
+                                        Resolved
+                                    </span>
+                                </td>
+
+                                <td>
+                                    08 May 2024
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 College Complaint System. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
