@@ -1,150 +1,146 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Submit Complaint | College Complaint System</title>
+    <title>Submit Complaint - College Complaint System</title>
 
-    <!-- Common CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Dashboard CSS -->
-    <link rel="stylesheet" href="dashboard.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Submit Page CSS -->
-    <link rel="stylesheet" href="submit.css">
 </head>
+
 
 <body>
 
+
     <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar">
+    <div class="student-navbar">
 
-        <div class="navbar-logo">
-            <a href="index.html">
-                College Complaint System
-            </a>
+        <div class="student-brand">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            <span>College Complaint System</span>
+
         </div>
 
-        <div class="navbar-links">
-            <a href="dashboard.html">Dashboard</a>
-            <a href="complaints.html">My Complaints</a>
-            <a href="submit.html" class="nav-active">Submit Complaint</a>
-            <a href="login.html">Logout</a>
+
+        <div class="student-user">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <i class="fa-solid fa-circle-user"></i>
+
+            <span>Vishesh Singhal</span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
         </div>
 
-    </nav>
+    </div>
 
 
-    <!-- ================= DASHBOARD CONTAINER ================= -->
 
-    <div class="dashboard-container">
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <div class="student-layout">
+
 
         <!-- ================= SIDEBAR ================= -->
 
-        <aside class="dashboard-sidebar">
-
-            <!-- Student Profile -->
-
-            <div class="student-profile">
-
-                <div class="profile-icon">
-                    👤
-                </div>
-
-                <h3>Student Name</h3>
-
-                <p>Student</p>
-
-            </div>
+        <aside class="student-sidebar">
 
 
-            <!-- Sidebar Menu -->
+            <a href="dashboard.html" class="student-link">
 
-            <div class="sidebar-menu">
+                <i class="fa-solid fa-house"></i>
 
-                <a href="dashboard.html">
-                    Dashboard
-                </a>
+                <span>Dashboard</span>
 
-                <a href="complaints.html">
-                    My Complaints
-                </a>
+            </a>
 
-                <a href="submit.html" class="sidebar-active">
-                    Submit Complaint
-                </a>
 
-                <a href="profile.html">
-                    Profile
-                </a>
+            <a href="submit.html" class="student-link active">
 
-                <a href="login.html">
-                    Logout
-                </a>
+                <i class="fa-solid fa-file-circle-plus"></i>
 
-            </div>
+                <span>Submit Complaint</span>
+
+            </a>
+
+
+            <a href="complaints.html" class="student-link">
+
+                <i class="fa-solid fa-list"></i>
+
+                <span>My Complaints</span>
+
+            </a>
+
+
+            <a href="#" class="student-link">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+
+            <a href="#" class="student-link">
+
+                <i class="fa-solid fa-key"></i>
+
+                <span>Change Password</span>
+
+            </a>
+
+
+            <a href="login.html" class="student-link logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
 
         </aside>
 
 
-        <!-- ================= MAIN CONTENT ================= -->
 
-        <main class="dashboard-main">
+        <!-- ================= CONTENT ================= -->
 
-            <!-- Page Heading -->
+        <main class="submit-content">
 
-            <div class="welcome-section">
 
-                <div>
-                    <h1>Submit Complaint</h1>
+            <div class="submit-header">
 
-                    <p>
-                        Submit your complaint and we will make sure it reaches the right department.
-                    </p>
-                </div>
+                <h1>Submit New Complaint</h1>
+
+                <p>
+                    Please provide the details of your complaint below.
+                </p>
 
             </div>
 
 
-            <!-- ================= COMPLAINT FORM ================= -->
 
-            <section class="submit-section">
+            <!-- ================= FORM CARD ================= -->
 
-                <div class="section-heading">
-
-                    <div>
-                        <h2>Complaint Details</h2>
-
-                        <div class="title-line"></div>
-                    </div>
-
-                </div>
+            <div class="submit-card">
 
 
-                <form class="complaint-form" action="#" method="post">
-
-
-                    <!-- Complaint Title -->
-
-                    <div class="form-group">
-
-                        <label for="complaint-title">
-                            Complaint Title
-                        </label>
-
-                        <input
-                            type="text"
-                            id="complaint-title"
-                            name="complaint_title"
-                            placeholder="Enter complaint title"
-                            required
-                        >
-
-                    </div>
+                <form action="#" method="post">
 
 
                     <!-- Category -->
@@ -152,41 +148,37 @@
                     <div class="form-group">
 
                         <label for="category">
-                            Category
+                            Complaint Category
                         </label>
 
-                        <select
-                            id="category"
-                            name="category"
-                            required
-                        >
+                        <select id="category" name="category" required>
 
-                            <option value="" selected disabled>
-                                Select complaint category
-                            </option>
-
-                            <option value="academic">
-                                Academic
+                            <option value="">
+                                Select Category
                             </option>
 
                             <option value="hostel">
                                 Hostel
                             </option>
 
-                            <option value="library">
-                                Library
+                            <option value="it">
+                                IT/Computer
+                            </option>
+
+                            <option value="mess">
+                                Mess
                             </option>
 
                             <option value="infrastructure">
                                 Infrastructure
                             </option>
 
-                            <option value="faculty">
-                                Faculty
+                            <option value="library">
+                                Library
                             </option>
 
-                            <option value="examination">
-                                Examination
+                            <option value="transport">
+                                Transport
                             </option>
 
                             <option value="other">
@@ -198,152 +190,81 @@
                     </div>
 
 
-                    <!-- Department -->
+
+                    <!-- Subject -->
 
                     <div class="form-group">
 
-                        <label for="department">
-                            Department
+                        <label for="subject">
+                            Subject
                         </label>
 
-                        <select
-                            id="department"
-                            name="department"
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter complaint subject"
                             required
                         >
-
-                            <option value="" selected disabled>
-                                Select department
-                            </option>
-
-                            <option value="cse">
-                                Computer Science & Engineering
-                            </option>
-
-                            <option value="ece">
-                                Electronics & Communication
-                            </option>
-
-                            <option value="me">
-                                Mechanical Engineering
-                            </option>
-
-                            <option value="ce">
-                                Civil Engineering
-                            </option>
-
-                            <option value="admin">
-                                Administration
-                            </option>
-
-                            <option value="other">
-                                Other
-                            </option>
-
-                        </select>
 
                     </div>
 
 
-                    <!-- Complaint Description -->
+
+                    <!-- Description -->
 
                     <div class="form-group">
 
                         <label for="description">
-                            Complaint Description
+                            Description
                         </label>
 
                         <textarea
                             id="description"
                             name="description"
-                            rows="7"
-                            placeholder="Describe your complaint in detail..."
+                            rows="6"
+                            placeholder="Write your complaint in detail..."
                             required
                         ></textarea>
 
                     </div>
 
 
-                    <!-- Location -->
 
-                    <div class="form-group">
+                    <!-- Submit -->
 
-                        <label for="location">
-                            Location
-                        </label>
+                    <button type="submit" class="complaint-submit-btn">
 
-                        <input
-                            type="text"
-                            id="location"
-                            name="location"
-                            placeholder="Enter location related to complaint"
-                        >
+                        <i class="fa-solid fa-paper-plane"></i>
 
-                    </div>
+                        Submit Complaint
 
+                    </button>
 
-                    <!-- Attachment -->
-
-                    <div class="form-group">
-
-                        <label for="attachment">
-                            Attachment <span>(Optional)</span>
-                        </label>
-
-                        <input
-                            type="file"
-                            id="attachment"
-                            name="attachment"
-                            accept=".jpg,.jpeg,.png,.pdf"
-                        >
-
-                        <small>
-                            You can upload JPG, PNG or PDF files.
-                        </small>
-
-                    </div>
-
-
-                    <!-- Form Buttons -->
-
-                    <div class="form-actions">
-
-                        <a
-                            href="dashboard.html"
-                            class="cancel-btn"
-                        >
-                            Cancel
-                        </a>
-
-                        <button
-                            type="submit"
-                            class="dashboard-submit-btn"
-                        >
-                            Submit Complaint
-                        </button>
-
-                    </div>
 
                 </form>
 
-            </section>
+
+            </div>
+
 
         </main>
 
     </div>
 
 
+
     <!-- ================= FOOTER ================= -->
 
     <footer class="footer">
 
-        <p>
-            © 2026 College Complaint System. All Rights Reserved.
-        </p>
+        © 2026 College Complaint System. All Rights Reserved.
 
     </footer>
 
+
 </body>
+
 </html>
-```
+
 
