@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Complaints | College Complaint System</title>
+
+    <!-- Vishesh ki common CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Vishal ki dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="brand">
+            <span>🏫</span>
+            <span>College Complaint System</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="submit-complaint.html">
+                Submit Complaint
+            </a>
+
+            <a href="my-complaints.html" class="active">
+                My Complaints
+            </a>
+
+            <a href="index.html" class="login-btn">
+                Logout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="dashboard-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="dashboard-sidebar">
+
+            <div class="student-profile">
+
+                <div class="profile-icon">
+                    👤
+                </div>
+
+                <h3>Student</h3>
+
+                <p>Student Account</p>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html">
+                    📊 Dashboard
+                </a>
+
+                <a href="submit-complaint.html">
+                    📝 Submit Complaint
+                </a>
+
+                <a href="my-complaints.html" class="sidebar-active">
+                    📋 My Complaints
+                </a>
+
+                <a href="#">
+                    👤 Profile
+                </a>
+
+                <a href="#">
+                    🔐 Change Password
+                </a>
+
+                <a href="index.html">
+                    🚪 Logout
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="dashboard-main">
+
+            <!-- Page Heading -->
+
+            <section class="welcome-section">
+
+                <div>
+
+                    <h1>My Complaints</h1>
+
+                    <p>
+                        View and track all your submitted complaints.
+                    </p>
+
+                </div>
+
+
+                <a href="submit-complaint.html"
+                   class="dashboard-submit-btn">
+
+                    + New Complaint
+
+                </a>
+
+            </section>
+
+
+            <!-- ================= COMPLAINT TABLE ================= -->
+
+            <section class="recent-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>Complaint History</h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Complaint ID</th>
+
+                                <th>Subject</th>
+
+                                <th>Category</th>
+
+                                <th>Status</th>
+
+                                <th>Date</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>#CMP001</td>
+
+                                <td>
+                                    Hostel Water Problem
+                                </td>
+
+                                <td>
+                                    Hostel
+                                </td>
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    12 May 2024
+                                </td>
+
+                                <td>
+
+                                    <a href="#"
+                                       class="view-all-btn">
+
+                                        View Details
+
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#CMP002</td>
+
+                                <td>
+                                    Wi-Fi Not Working
+                                </td>
+
+                                <td>
+                                    IT / Computer
+                                </td>
+
+                                <td>
+
+                                    <span class="status progress">
+                                        In Progress
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    10 May 2024
+                                </td>
+
+                                <td>
+
+                                    <a href="#"
+                                       class="view-all-btn">
+
+                                        View Details
+
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#CMP003</td>
+
+                                <td>
+                                    Mess Food Quality
+                                </td>
+
+                                <td>
+                                    Mess
+                                </td>
+
+                                <td>
+
+                                    <span class="status resolved">
+                                        Resolved
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    08 May 2024
+                                </td>
+
+                                <td>
+
+                                    <a href="#"
+                                       class="view-all-btn">
+
+                                        View Details
+
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>#CMP004</td>
+
+                                <td>
+                                    Classroom Fan Problem
+                                </td>
+
+                                <td>
+                                    Classroom
+                                </td>
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+
+                                </td>
+
+                                <td>
+                                    05 May 2024
+                                </td>
+
+                                <td>
+
+                                    <a href="#"
+                                       class="view-all-btn">
+
+                                        View Details
+
+                                    </a>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 College Complaint System. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
