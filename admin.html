@@ -1,0 +1,668 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | College Complaint System</title>
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="navbar-logo">
+            <a href="index.html">
+                College Complaint System
+            </a>
+        </div>
+
+        <div class="navbar-links">
+
+            <a href="admin.html" class="nav-active">
+                Admin Dashboard
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= ADMIN CONTAINER ================= -->
+
+    <div class="dashboard-container">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="dashboard-sidebar">
+
+            <!-- Admin Profile -->
+
+            <div class="student-profile">
+
+                <div class="profile-icon">
+                    👨‍💼
+                </div>
+
+                <h3>Admin</h3>
+
+                <p>Administrator</p>
+
+            </div>
+
+
+            <!-- Sidebar Menu -->
+
+            <div class="sidebar-menu">
+
+                <a href="admin.html" class="sidebar-active">
+                    Dashboard
+                </a>
+
+                <a href="#all-complaints">
+                    All Complaints
+                </a>
+
+                <a href="#pending">
+                    Pending
+                </a>
+
+                <a href="#in-progress">
+                    In Progress
+                </a>
+
+                <a href="#resolved">
+                    Resolved
+                </a>
+
+                <a href="#students">
+                    Students
+                </a>
+
+                <a href="index.html">
+                    Logout
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="dashboard-main">
+
+            <!-- Welcome Section -->
+
+            <div class="welcome-section">
+
+                <div>
+
+                    <h1>Admin Dashboard</h1>
+
+                    <p>
+                        Manage and monitor student complaints from one place.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= STATISTICS CARDS ================= -->
+
+            <div class="dashboard-cards">
+
+                <!-- Total Complaints -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon blue">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <h3>Total Complaints</h3>
+
+                        <p>120</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pending -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon orange">
+                        ⏳
+                    </div>
+
+                    <div>
+
+                        <h3>Pending</h3>
+
+                        <p>35</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- In Progress -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon purple">
+                        🔄
+                    </div>
+
+                    <div>
+
+                        <h3>In Progress</h3>
+
+                        <p>25</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resolved -->
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <h3>Resolved</h3>
+
+                        <p>60</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= ALL COMPLAINTS ================= -->
+
+            <section class="recent-section" id="all-complaints">
+
+                <!-- Section Heading -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>All Complaints</h2>
+
+                        <div class="title-line"></div>
+
+                    </div>
+
+                    <a href="#all-complaints" class="view-all-btn">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <!-- ================= FILTERS ================= -->
+
+                <div class="admin-filters">
+
+                    <div class="filter-group">
+
+                        <label for="status-filter">
+                            Status
+                        </label>
+
+                        <select id="status-filter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="progress">
+                                In Progress
+                            </option>
+
+                            <option value="resolved">
+                                Resolved
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="category-filter">
+                            Category
+                        </label>
+
+                        <select id="category-filter">
+
+                            <option value="all">
+                                All Categories
+                            </option>
+
+                            <option value="academic">
+                                Academic
+                            </option>
+
+                            <option value="hostel">
+                                Hostel
+                            </option>
+
+                            <option value="library">
+                                Library
+                            </option>
+
+                            <option value="infrastructure">
+                                Infrastructure
+                            </option>
+
+                            <option value="faculty">
+                                Faculty
+                            </option>
+
+                            <option value="examination">
+                                Examination
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group search-group">
+
+                        <label for="search">
+                            Search
+                        </label>
+
+                        <input
+                            type="text"
+                            id="search"
+                            placeholder="Search complaint..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= COMPLAINT TABLE ================= -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Complaint ID
+                                </th>
+
+                                <th>
+                                    Student
+                                </th>
+
+                                <th>
+                                    Category
+                                </th>
+
+                                <th>
+                                    Complaint
+                                </th>
+
+                                <th>
+                                    Date
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <!-- Complaint 1 -->
+
+                            <tr>
+
+                                <td>
+                                    #CMP001
+                                </td>
+
+                                <td>
+                                    Rahul Sharma
+                                </td>
+
+                                <td>
+                                    Infrastructure
+                                </td>
+
+                                <td>
+                                    Classroom projector not working
+                                </td>
+
+                                <td>
+                                    28 Aug 2026
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="admin-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Complaint 2 -->
+
+                            <tr>
+
+                                <td>
+                                    #CMP002
+                                </td>
+
+                                <td>
+                                    Priya Singh
+                                </td>
+
+                                <td>
+                                    Hostel
+                                </td>
+
+                                <td>
+                                    Water supply issue in hostel
+                                </td>
+
+                                <td>
+                                    27 Aug 2026
+                                </td>
+
+                                <td>
+                                    <span class="status progress">
+                                        In Progress
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="admin-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Complaint 3 -->
+
+                            <tr>
+
+                                <td>
+                                    #CMP003
+                                </td>
+
+                                <td>
+                                    Amit Kumar
+                                </td>
+
+                                <td>
+                                    Library
+                                </td>
+
+                                <td>
+                                    Need more reference books
+                                </td>
+
+                                <td>
+                                    26 Aug 2026
+                                </td>
+
+                                <td>
+                                    <span class="status resolved">
+                                        Resolved
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="admin-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Complaint 4 -->
+
+                            <tr>
+
+                                <td>
+                                    #CMP004
+                                </td>
+
+                                <td>
+                                    Neha Verma
+                                </td>
+
+                                <td>
+                                    Academic
+                                </td>
+
+                                <td>
+                                    Issue regarding examination schedule
+                                </td>
+
+                                <td>
+                                    25 Aug 2026
+                                </td>
+
+                                <td>
+                                    <span class="status pending">
+                                        Pending
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="admin-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <!-- Complaint 5 -->
+
+                            <tr>
+
+                                <td>
+                                    #CMP005
+                                </td>
+
+                                <td>
+                                    Arjun Mehta
+                                </td>
+
+                                <td>
+                                    Faculty
+                                </td>
+
+                                <td>
+                                    Concern regarding lecture timings
+                                </td>
+
+                                <td>
+                                    24 Aug 2026
+                                </td>
+
+                                <td>
+                                    <span class="status progress">
+                                        In Progress
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="admin-action-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= QUICK ACTIONS ================= -->
+
+            <section class="admin-quick-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>Quick Actions</h2>
+
+                        <div class="title-line"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <a href="#pending" class="quick-action-card">
+
+                        <div class="card-icon orange">
+                            ⏳
+                        </div>
+
+                        <div>
+
+                            <h3>Pending Complaints</h3>
+
+                            <p>Review complaints waiting for action.</p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#in-progress" class="quick-action-card">
+
+                        <div class="card-icon purple">
+                            🔄
+                        </div>
+
+                        <div>
+
+                            <h3>In Progress</h3>
+
+                            <p>Monitor complaints currently being handled.</p>
+
+                        </div>
+
+                    </a>
+
+
+                    <a href="#resolved" class="quick-action-card">
+
+                        <div class="card-icon green">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <h3>Resolved Complaints</h3>
+
+                            <p>View complaints that have been resolved.</p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 College Complaint System. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
