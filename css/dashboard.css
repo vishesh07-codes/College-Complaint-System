@@ -1,0 +1,443 @@
+/* =====================================================
+   STUDENT DASHBOARD
+   Dashboard Specific Styling
+   Common Theme: style.css
+   ===================================================== */
+
+
+/* ================= DASHBOARD LAYOUT ================= */
+
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 70px);
+    background-color: #f5f7fb;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.dashboard-sidebar {
+    width: 240px;
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 25px 15px;
+}
+
+
+/* Student Profile */
+
+.student-profile {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
+}
+
+.profile-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #eaf3ff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 10px;
+
+    font-size: 25px;
+}
+
+.student-profile h3 {
+    color: #123b6d;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.student-profile p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Sidebar Menu */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar-menu a {
+    color: #444;
+    text-decoration: none;
+
+    padding: 12px 15px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #eaf3ff;
+    color: #123b6d;
+}
+
+
+/* Active Sidebar Item */
+
+.sidebar-menu .sidebar-active {
+    background-color: #123b6d;
+    color: white;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.dashboard-main {
+    flex: 1;
+    padding: 35px 40px;
+}
+
+
+/* ================= WELCOME SECTION ================= */
+
+.welcome-section {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+    color: #123b6d;
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.welcome-section p {
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* New Complaint Button */
+
+.dashboard-submit-btn {
+    background-color: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 20px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border: 1px solid #2563eb;
+
+    transition: 0.2s;
+}
+
+.dashboard-submit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* ================= COMPLAINT CARDS ================= */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+
+.dashboard-card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Card Icons */
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 19px;
+}
+
+.card-icon.blue {
+    background-color: #eaf3ff;
+    color: #2563eb;
+}
+
+.card-icon.orange {
+    background-color: #fff4df;
+    color: #f0a000;
+}
+
+.card-icon.purple {
+    background-color: #f1e9ff;
+    color: #8145d5;
+}
+
+.card-icon.green {
+    background-color: #e7f8ed;
+    color: #21a44b;
+}
+
+
+/* Card Text */
+
+.dashboard-card h3 {
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+.dashboard-card p {
+    color: #123b6d;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+/* ================= RECENT COMPLAINTS ================= */
+
+.recent-section {
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Section Heading */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    color: #123b6d;
+
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+
+/* Use same blue line as common theme */
+
+.section-heading .title-line {
+    margin: 0;
+}
+
+
+/* View All */
+
+.view-all-btn {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.view-all-btn:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.recent-section table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+}
+
+.recent-section th {
+    background-color: #f5f7fb;
+
+    color: #123b6d;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    padding: 14px;
+}
+
+.recent-section td {
+    color: #555;
+
+    font-size: 13px;
+
+    padding: 14px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.recent-section tbody tr:hover {
+    background-color: #fafcff;
+}
+
+
+/* ================= STATUS ================= */
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.status.pending {
+    background-color: #fff4df;
+    color: #c47b00;
+}
+
+.status.progress {
+    background-color: #f1e9ff;
+    color: #8145d5;
+}
+
+.status.resolved {
+    background-color: #e7f8ed;
+    color: #21a44b;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        width: 100%;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .dashboard-main {
+        padding: 25px 20px;
+    }
+
+    .welcome-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .recent-section {
+        padding: 18px;
+    }
+
+}
