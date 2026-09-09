@@ -42,3 +42,15 @@ CREATE TABLE admin (
     role VARCHAR(20) DEFAULT 'Admin',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+CREATE TABLE comments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    complaint_id INT NOT NULL,
+    user_id INT NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (complaint_id) REFERENCES complaints(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
