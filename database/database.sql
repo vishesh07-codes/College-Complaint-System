@@ -54,3 +54,15 @@ CREATE TABLE comments (
     FOREIGN KEY (complaint_id) REFERENCES complaints(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('student', 'admin') DEFAULT 'student',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
